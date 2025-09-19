@@ -35,7 +35,7 @@ This document records the completed Salesforce org configurations as implemented
 
 **Screenshot Navigation:** Setup → Company Information → Edit
 *Take screenshot of completed company profile showing all details*
-![alt text](image.png)
+![alt text](image-0.png)
 
 **Locale & Currency Settings:**
 - Locale: English (India)  
