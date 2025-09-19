@@ -162,6 +162,7 @@ Agricultural Director
 
 **Screenshot Navigation:** Setup → Sharing Settings → Organization-Wide Defaults
 *Take screenshot of OWD settings table*
+![alt text](image-7.png)
 
 ---
 
