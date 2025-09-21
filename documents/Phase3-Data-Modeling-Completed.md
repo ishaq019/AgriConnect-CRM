@@ -187,7 +187,7 @@ This document records the completed Salesforce data model configurations impleme
 - Object Name: Government_Scheme (API: Government_Scheme__c)
 - Record Name: Scheme Name
 - Data Type: Text
-
+![alt text](image-13.png)
 **Custom Fields Created:**
 
 1) **Scheme_Code__c (Text, Required, Unique)**
@@ -227,7 +227,7 @@ This document records the completed Salesforce data model configurations impleme
 
 **Screenshot Navigation:** Setup → Object Manager → Government Scheme → Fields & Relationships  
 *Take screenshot showing Government Scheme object fields*
-
+![alt text](image-14.png)
 ---
 
 ### 5. Custom Object 4: MSP Price Registry (MSP_Price__c)
@@ -272,7 +272,7 @@ This document records the completed Salesforce data model configurations impleme
 
 **Screenshot Navigation:** Setup → Object Manager → MSP Price Registry → Fields & Relationships
 *Take screenshot showing MSP Price Registry fields*
-
+![alt text](image-15.png)
 ---
 
 ### 6. Custom Object 5: Buyer Network (Buyer__c)
@@ -324,7 +324,7 @@ This document records the completed Salesforce data model configurations impleme
 
 **Screenshot Navigation:** Setup → Object Manager → Buyer → Fields & Relationships
 *Take screenshot showing Buyer object fields*
-
+![alt text](image-16.png)
 ---
 
 ### 7. Junction Objects for Many-to-Many Relationships
