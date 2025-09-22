@@ -334,7 +334,7 @@ This document records the completed Salesforce data model configurations impleme
 - Master-Detail to Crop_Cycle__c
 - Master-Detail to Buyer__c  
 - Additional Fields: Transaction_Date__c, Quantity__c, Price_Per_Unit__c, Payment_Status__c
-
+![alt text](image-17.png)
 **Scheme_Application__c (Farmer-Scheme Junction)**  
 - Purpose: Track farmer applications to government schemes
 - Master-Detail to Account (Farmer)
@@ -343,7 +343,7 @@ This document records the completed Salesforce data model configurations impleme
 
 **Screenshot Navigation:** Setup → Object Manager → [Junction Object] → Fields & Relationships  
 *Take screenshot showing junction object relationships*
-
+![alt text](image-18.png)
 ---
 
 ### 8. Object Relationships Configured
@@ -362,7 +362,7 @@ This document records the completed Salesforce data model configurations impleme
 
 **Screenshot Navigation:** Setup → Schema Builder
 *Take screenshot of complete schema showing all objects and relationships*
-
+![alt text](image-19.png)
 ---
 
 ### 9. Record Types and Page Layouts
@@ -395,10 +395,10 @@ This document records the completed Salesforce data model configurations impleme
 **Farm Compact Layout:**
 - Fields: Farm Name, Owner, Farm Size, Soil Type, Status
 - Set as Primary Compact Layout
-
+![alt text](image-20.png)
 **Crop Cycle Compact Layout:**
 - Fields: Crop Cycle No, Farm, Crop Type, Crop Stage, Planting Date, Season
-
+![alt text](image-21.png)
 **Screenshot Navigation:** Setup → Object Manager → [Object] → Compact Layouts
 *Take screenshot showing compact layout configuration*
 
@@ -412,17 +412,17 @@ This document records the completed Salesforce data model configurations impleme
 - Rule Name: Farm_Size_Must_Be_Positive  
 - Error Formula: Farm_Size__c <= 0
 - Error Message: "Farm size must be greater than 0 acres"
-
+![alt text](image-23.png)
 2) **Harvest Date Validation (Crop_Cycle__c)**  
 - Rule Name: Harvest_After_Planting
 - Error Formula: AND(NOT(ISBLANK(Expected_Harvest_Date__c)), Expected_Harvest_Date__c <= Planting_Date__c)
 - Error Message: "Expected harvest date must be after planting date"
-
+![alt text](image-22.png)
 3) **MSP Rate Validation (MSP_Price__c)**
 - Rule Name: MSP_Rate_Positive
 - Error Formula: MSP_Rate__c <= 0  
 - Error Message: "MSP rate must be greater than 0"
-
+![alt text](image-24.png)
 **Screenshot Navigation:** Setup → Object Manager → [Object] → Validation Rules
 *Take screenshot showing validation rules configuration*
 
@@ -445,10 +445,6 @@ This document records the completed Salesforce data model configurations impleme
 - MSP price reference system
 - Geographic location tracking for logistics
 
-**Screenshot Navigation:** Setup → Schema Builder (Final View)
-*Take comprehensive screenshot showing complete data model with all relationships*
-
----
 
 ## Phase 3 Verification Completed
 
