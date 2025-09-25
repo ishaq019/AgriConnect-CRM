@@ -136,7 +136,7 @@ This document records the completed Salesforce process automation configurations
 
 **Screenshot Navigation:** Setup → Flows → New Flow → Screen Flow
 *Take screenshots of flow builder canvas showing all elements and connections*
-
+![alt text](image-29.png)
 #### B) MSP Price Alert Flow (Record-Triggered)
 
 **Flow Name:** MSP_Price_Change_Notification
@@ -160,7 +160,7 @@ This document records the completed Salesforce process automation configurations
 
 **Screenshot Navigation:** Setup → Flows → MSP_Price_Change_Notification → Open
 *Take screenshot of flow overview and detailed element configuration*
-
+![alt text](image-30.png)
 #### C) Subsidy Application Flow (Record-Triggered)
 
 **Flow Name:** Government_Scheme_Application_Process  
@@ -183,7 +183,7 @@ This document records the completed Salesforce process automation configurations
 5. **Task Creation**
    - Follow-up tasks for application processing
    - Document verification reminders
-
+![alt text](image-31.png)
 #### D) Crop Harvest Reminder Flow (Scheduled)
 
 **Flow Name:** Crop_Harvest_Reminder_Scheduler
@@ -286,7 +286,7 @@ This document records the completed Salesforce process automation configurations
 
 **Screenshot Navigation:** Setup → Process Builder → View All Processes
 *Take screenshot of process builder interface (for historical context)*
-
+![alt text](image-32.png)
 ---
 
 ### 6. Email Alert Templates Created
