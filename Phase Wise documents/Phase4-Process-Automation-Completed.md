@@ -310,19 +310,19 @@ This document records the completed Salesforce process automation configurations
   
   AgriConnect Team
   ```
-
+![alt text](image-34.png)
 #### B) Subsidy Approval Notification  
 
 **Template Name:** Subsidy_Approval_Confirmation
 - **Subject:** Subsidy Application Approved - {!Scheme_Application__c.Name}
 - **Body:** Personalized approval details with disbursement timeline
-
+![alt text](image-33.png)
 #### C) Harvest Reminder Template
 
 **Template Name:** Crop_Harvest_Reminder  
 - **Subject:** Harvest Time Approaching for {!Crop_Cycle__c.Crop_Type__c}
 - **Body:** Weather-based harvest recommendations and buyer contact information
-
+![alt text](image-35.png)
 **Screenshot Navigation:** Setup → Email Templates → Custom Templates → New
 *Take screenshots of email template creation and merge field configuration*
 
@@ -344,6 +344,7 @@ This document records the completed Salesforce process automation configurations
 3. **Entry 3: Subsidy Inquiries**
    - Criteria: `Type = "Subsidy Information"`
    - Assigned To: Government Schemes Queue
+   ![alt text](image-36.png)
 
 #### B) Lead Assignment for New Farmers
 
@@ -353,7 +354,8 @@ This document records the completed Salesforce process automation configurations
   - State = "Andhra Pradesh" → AP Agricultural Officer Queue
   - State = "Telangana" → Telangana Agricultural Officer Queue
   - Default → General Agricultural Support Queue
-
+![alt text](image-37.png)
+![alt text](image-38.png)
 **Screenshot Navigation:** Setup → Assignment Rules → [Object] → New Rule
 *Take screenshot showing assignment rule criteria and queue assignments*
 
@@ -368,13 +370,13 @@ This document records the completed Salesforce process automation configurations
 - **Criteria:** Origin = "Web" OR Origin = "Phone"
 - **Response Template:** Immediate acknowledgment with expected response time
 - **Business Hours:** During AgriConnect Standard Hours only
-
+![alt text](image-39.png)
 #### B) Government Scheme Inquiry Response
 
 **Rule Name:** Scheme_Information_Auto_Response
 - **Trigger:** Cases with Type = "Subsidy Information"  
 - **Response:** Automated scheme catalog and eligibility checker information
-
+![alt text](image-40.png)
 **Screenshot Navigation:** Setup → Auto-Response Rules → Cases → New Rule
 *Take screenshot of auto-response rule configuration*
 
