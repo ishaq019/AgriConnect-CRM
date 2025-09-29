@@ -1,0 +1,25 @@
+.price-card {
+    text-align: center;
+    border: 1px solid #dddbda;
+    border-radius: 4px;
+}
+
+.price-display {
+    font-weight: bold;
+    color: #2e844a;
+    margin: 8px 0;
+}
+
+.slds-text-color_success {
+    color: #2e844a;
+}
+
+.slds-text-color_error {
+    color: #c23934;
+}
+
+.price-card:hover {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transform: translateY(-1px);
+    transition: all 0.2s ease;
+}

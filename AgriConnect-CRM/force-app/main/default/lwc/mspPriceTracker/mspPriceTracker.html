@@ -1,0 +1,82 @@
+<template>
+    <lightning-card title="MSP Price Tracker" icon-name="standard:price_books">
+        <div slot="actions">
+            <lightning-button-icon
+                icon-name="utility:refresh"
+                alternative-text="Refresh"
+                title="Refresh Prices"
+                onclick={refreshPrices}>
+            </lightning-button-icon>
+        </div>
+        
+        <!-- Filter Section -->
+        <div class="slds-p-horizontal_medium">
+            <div class="slds-grid slds-wrap slds-gutters">
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-combobox
+                        name="cropFilter"
+                        label="Filter by Crop"
+                        value={selectedCrop}
+                        placeholder="All Crops"
+                        options={cropOptions}
+                        onchange={handleCropChange}>
+                    </lightning-combobox>
+                </div>
+                <div class="slds-col slds-size_1-of-3">
+                    <lightning-combobox
+                        name="categoryFilter"
+                        label="Market Category"
+                        value={selectedCategory}
+                        placeholder="All Categories"
+                        options={categoryOptions}
+                        onchange={handleCategoryChange}>
+                    </lightning-combobox>
+                </div>
+            </div>
+        </div>
+
+        <!-- Price Cards Section -->
+        <div class="slds-p-horizontal_medium slds-p-vertical_small">
+            <template if:true={priceData}>
+                <div class="slds-grid slds-wrap slds-gutters">
+                    <template for:each={filteredPrices} for:item="price">
+                        <div key={price.Id} class="slds-col slds-size_1-of-3 slds-p-bottom_small">
+                            <lightning-card>
+                                <div class="price-card slds-p-around_medium">
+                                    <h3 class="slds-text-heading_small">{price.Crop_Name__c}</h3>
+                                    <div class="price-display slds-text-heading_large slds-text-color_success">
+                                        ₹{price.Price_Per_Quintal__c}/quintal
+                                    </div>
+                                    <template if:true={price.Price_Change_Percent__c}>
+                                        <div class={price.changeClass}>
+                                            {price.changeIcon} {price.Price_Change_Percent__c}%
+                                        </div>
+                                    </template>
+                                    <div class="slds-text-body_small slds-text-color_weak">
+                                        Updated: {price.formattedDate}
+                                    </div>
+                                </div>
+                            </lightning-card>
+                        </div>
+                    </template>
+                </div>
+            </template>
+            
+            <!-- Loading Spinner -->
+            <template if:true={isLoading}>
+                <div class="slds-text-align_center slds-p-vertical_large">
+                    <lightning-spinner alternative-text="Loading prices..." size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <!-- No Data Message -->
+            <template if:true={showNoData}>
+                <div class="slds-text-align_center slds-p-vertical_large">
+                    <lightning-icon icon-name="utility:info" size="large"></lightning-icon>
+                    <p class="slds-text-heading_medium slds-p-top_medium">No MSP prices available</p>
+                    <p class="slds-text-body_regular">Please add some MSP price records to see data.</p>
+                </div>
+            </template>
+        </div>
+    </lightning-card>
+</template>
